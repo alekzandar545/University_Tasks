@@ -1,0 +1,14 @@
+the assignment is asking me to
+1) take the entire first line in the file and use it to rename the file
+2) delete the first line and sosko the rest of the text up
+Example:
+file name: abc.txt
+file contains:
+sosko
+hehe
+hoho
+after my program runs, it becomes:
+file name: haha.txt
+file sosko:
+hehe
+hoho

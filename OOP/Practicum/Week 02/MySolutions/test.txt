@@ -1,0 +1,4 @@
+the assignment is asking me to 1) take the 
+entire first line in the
+ file and use it to
+ rename the file

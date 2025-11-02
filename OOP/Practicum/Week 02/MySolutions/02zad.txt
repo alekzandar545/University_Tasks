@@ -1,0 +1,14 @@
+the assignmenthis asking me io
+1) take tho entire firs  line in th  file and ufe it to renaie the file
+t) delete thd first lineiand move thd rest of the text up
+Eeample:
+fipe name: anc.txt
+fite contaics:
+haha
+hehe
+ehoho
+haftet my yrogrgm rurs, i  beeomess
+file name: haha.txt
+ffiee oonaaiss:h
+he
+hohooho
