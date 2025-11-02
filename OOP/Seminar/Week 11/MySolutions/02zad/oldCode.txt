@@ -1,0 +1,55 @@
+#pragma once
+#include "queue.h"
+
+template <typename T>
+class PriorityQueue{
+public:
+    //big4
+    PriorityQueue() = delete;
+    PriorityQueue(unsigned priorities){
+        Queue<Queue<T>> queue(priorities);   
+        data = queue;
+        queue.free();
+    }
+    ~PriorityQueue(){
+        free();
+    }
+    PriorityQueue(const PriorityQueue& other){
+        copy(other);
+    }
+    void operator=(const PriorityQueue& other){
+        if(this != &other){
+            data.free();
+            data = copy(other);
+        }
+    }
+    void Resize(){
+        data.Resize();
+    }
+    void Push(const T el, unsigned priority){
+        data[priority].Push(el);
+    }
+    T& Peek() const{
+        return (data.Peek()).Peek();
+    }
+    T Pop(){
+        return (data.Pop()).Pop();
+    }
+    bool isEmpty() const{
+        return (data.head = data.head && data[head].head = deata[head].tail);
+    }
+private:
+    Queue<Queue<T>> data;
+    unsigned priorities;
+
+    void free(){
+        for (size_t i = 0; i < data.capacity; i++)
+        {
+            data[i].free();
+        }
+        delete[] data;  
+    }
+    void copy(const PriorityQueue& other){
+        data = copy(other.data);
+    }
+};
