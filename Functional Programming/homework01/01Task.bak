@@ -1,0 +1,11 @@
+#lang racket
+
+
+
+(min-endurance-max-length 333 1000) ➝ 1000
+(min-endurance-max-length 333 2000) ➝ 1000
+(min-endurance-max-length 356 460) ➝ 360
+(min-endurance-max-length 498 701) ➝ 500
+(min-endurance-max-length 583 889) ➝ 600
+(min-endurance-max-length 34 621) ➝ 100
+(min-endurance-max-length 234 651) ➝ 234

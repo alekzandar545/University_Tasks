@@ -1,0 +1,11 @@
+#lang racket
+
+#|Description:
+
+The depth of an atom x in a list xs is the number of times car
+must be applied to xs in order to reach x. Define a procedure
+that removes all atoms that are smaller than their depth.
+
+Acceptance criteria:
+
+All tests pass.|#

@@ -1,0 +1,5 @@
+#lang racket
+
+(= (primes-prod 12) 6)
+(= (primes-prod 12) 210)
+(= (primes-prod 12) 6)

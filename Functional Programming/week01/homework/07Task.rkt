@@ -1,0 +1,31 @@
+#lang racket
+#|
+Description:
+
+John has a backpack. With it he can carry k kilograms.
+ An item from the supermarket weighs w kilograms.
+Define a procedure that accepts three numbers - c (number of products),
+ k and w and returns whether John is capable of buying all the products in one trip to the supermarket.
+
+Acceptance criteria:
+
+Add one new test case. Place a comment after it with the words my test.
+All tests pass.
+Guards are used.
+Parameter validation is performed.
+The parameters are named in accordance with the names given in the description.|#
+
+(define (can-carry? c k w)
+  (cond
+    [(negative? w) (error "Weight cannot be negative!")]
+    [(negative? c) (error "Product quantity cannot be negative!")]
+    [(negative? k) (error "Capacity cannot be negative!")]
+    [else (not (> (* w c) k))]))
+  
+(equal? (can-carry? 5 15 3) #t)
+(equal? (can-carry? 1 5 4) #t)
+(equal? (can-carry? 13 25 2) #f)
+(equal? (can-carry? 24 104.44 21.12) #f)
+(equal? (can-carry? 51 34.75 19.852) #f)
+(equal? (can-carry? 42 95.11 0.51) #t)
+(equal? (can-carry? 10 200 50) #f) ;my test

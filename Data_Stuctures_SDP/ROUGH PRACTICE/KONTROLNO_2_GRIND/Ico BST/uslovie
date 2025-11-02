@@ -1,0 +1,4 @@
+read the values for 2 BSTs from a file and create a BST that contains the elements of both
+->read and put all values into vector
+->mergeSort the values
+->binary search Create tree;

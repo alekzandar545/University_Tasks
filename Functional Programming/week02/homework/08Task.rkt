@@ -1,0 +1,28 @@
+#lang racket
+
+#|Description:
+
+A number is interesting if and only if it is evenly divided by the sum of its digits.
+Define a predicate that checks whether a number is interesting.
+
+Acceptance criteria:
+
+All tests pass.
+Add one new test case. Place a comment after it with the words my test.|#
+
+(require math/number-theory)
+  (define (sum-digits x)
+    (if (zero? x)
+        0
+        (+ (remainder x 10) (sum-digits (quotient x 10)))))
+
+(define (interesting? x)
+  (divides? (sum-digits x) x))
+
+(equal? (interesting? 410) #t)
+(equal? (interesting? 212) #f)
+(equal? (interesting? 567) #f)
+(equal? (interesting? 70) #t)
+(equal? (interesting? 5) #t)
+(equal? (interesting? 4) #t)
+(equal? (interesting? 4444444) #f) ;my test

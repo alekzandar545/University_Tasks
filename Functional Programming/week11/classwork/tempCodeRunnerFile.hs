@@ -1,0 +1,1 @@
+ Node (f val) (mapTree left f) (mapTree right f)
